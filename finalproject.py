@@ -7,13 +7,29 @@ class Player:
         self.name = name
         self.ovr = int(0)
         self.pockets = int(0)
-        self.attributes = attributes
+        self.attributes = []
         self.fame = int(0)
         self.morale = morale
         self.energy = int(0)
         self.train = train
         self.game = game
         self.quit = quit
+
+class Npc:
+    def __init__(self,name):
+        self.name = name
+        self.random_value = random.randint(1,2)
+        if random == 1:
+            print("A event has spawned")
+        elif random == 2:
+            print
+        
+
+
+
+
+
+
 
 
 name = input ("Welcome to the Career what would you like to name your player" )
@@ -37,5 +53,10 @@ def menu(my_player):
             break
         else:
             print("You have to choose 1,2,3, or 4")
+        self.random_value = random.randint(1,2)
+        if random == 1:
+            print("A event has spawned")
+        elif random == 2:
+            print
 menu(my_player)
     
