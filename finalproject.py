@@ -1,4 +1,5 @@
 import random
+from typing import Self
 
 
 
@@ -6,23 +7,39 @@ class Player:
     def __init__(self,name,ovr,pockets,attributes,fame,morale,energy,train,game,quit):
         self.name = name
         self.ovr = int(0)
-        self.pockets = int(0)
+        self.pockets = int(50)
         self.attributes = []
         self.fame = int(0)
         self.morale = morale
-        self.energy = int(0)
+        self.energy = int(100)
         self.train = train
         self.game = game
         self.quit = quit
+       
+    def train(player):
+        valid = True
+    training = input("1)Train in the gym by yourself 2)Lift weights 3)Work on conditioning""Choose what would you like to do")
+    if training == "1":
+        Player.ovr += 1 
+        Player.energy -= 10
+        print(f"after working in the gym {Player.name} gained 1 ovr but loses 10 energy")
+    elif training == "2":
+        Player.ovr += 1
+        Player.energy -= 10
+        print(f"after lifting weights {Player.name} gained 1 ovr but loses 10 energy")
+    elif training == "3":
+        Player.ovr += 1
+        player.energy -= 10
+        print(f"after working on conditioning {Player.name} gained 1 ovr but loses 10 energy")
+    else:
+        print("You must choose 1,2,or 3")
+    print (f"Happiness: {self.ovr}  Tiredness: {self.energy}")
 
-class Npc:
-    def __init__(self,name):
-        self.name = name
-        self.random_value = random.randint(1,2)
-        if random == 1:
-            print("A event has spawned")
-        elif random == 2:
-            print
+
+
+
+
+
         
 
 
