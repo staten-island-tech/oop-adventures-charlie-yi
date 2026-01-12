@@ -16,24 +16,15 @@ class Player:
         self.game = game
         self.quit = quit
        
-    def train(player):
-        valid = True
-    training = input("1)Train in the gym by yourself 2)Lift weights 3)Work on conditioning""Choose what would you like to do")
-    if training == "1":
-        Player.ovr += 1 
-        Player.energy -= 10
-        print(f"after working in the gym {Player.name} gained 1 ovr but loses 10 energy")
-    elif training == "2":
-        Player.ovr += 1
-        Player.energy -= 10
-        print(f"after lifting weights {Player.name} gained 1 ovr but loses 10 energy")
-    elif training == "3":
-        Player.ovr += 1
-        player.energy -= 10
-        print(f"after working on conditioning {Player.name} gained 1 ovr but loses 10 energy")
-    else:
-        print("You must choose 1,2,or 3")
-    print (f"Happiness: {self.ovr}  Tiredness: {self.energy}")
+
+
+class Npc:
+    def __init__(self,name,dialogue):
+        self.name = name
+        self.dialogue = dialogue
+        name = ["georgie,Bozic,Mr curtis,justin,"]
+        print(f"{self.name}")
+
 
 
 
