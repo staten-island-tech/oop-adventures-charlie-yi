@@ -1,70 +1,56 @@
 import random
-from typing import Self
+
+class Item:
+    def __init__(self,name,cost,value,morale,energy,train,game):
+        self.name = name
+        self.ovr = cost
+        self.value = value
+        self.morale = morale
+        self.energy = int(100)
+
 
 
 
 class Player:
-    def __init__(self,name,ovr,pockets,attributes,fame,morale,energy,train,game,quit):
+    def __init__(self,name):
         self.name = name
-        self.ovr = int(0)
-        self.pockets = int(50)
+        self.ovr = 0
+        self.fame = 0
+        self.energy = 100
+        self.morale = 50 
+        self.money = 10
         self.attributes = []
-        self.fame = int(0)
-        self.morale = morale
-        self.energy = int(100)
-        self.train = train
-        self.game = game
-        self.quit = quit
-       
+        self.inventory = []
 
 
-class Npc:
-    def __init__(self,name,dialogue):
-        self.name = name
-        self.dialogue = dialogue
-        name = ["georgie,Bozic,Mr curtis,justin,"]
-        print(f"{self.name}")
+def show_stats():
+    print("stats")
+    print("Name:",self.name)
+    print("Ovr:",self.ovr)
+    print("Energy:",self.energy)
+    print("Money:",self.money)
+    print("Fame:",self.fame)
+    print("Morale", self.morale)
 
 
+def main():
+    name = input ("Enter player name")
+    player = Player(name)
+    store = store()
+    while True:
+        print("Main menu")
+        print("1)stats")
+        print("2)Train physical")
+        print("3)Train skills")
+        print("4)Pickup Game")
+        print("5)Store")
+        print("6)Recreation")
+        print("7)inventory")
+        print("8)quit")
 
-
-
-
-
-        
-
-
-
-
-
-
-
-
-name = input ("Welcome to the Career what would you like to name your player" )
-my_player = Player(f"{name}")
-print("Slums, you are just a kid in the Slums that had hoop dreams, until Georgie came to you and asked if you really wanted to get out and pursue the high life.")
-def menu(my_player):
-    play=True
-    while play == True:
-        print("1)Train with geogie")
-        print("2)earn enegry")
-        print("3)Play basketball game")
-        print("4)quit")
-        y = input("what would you like to do")
-        if y == "1":
-            Player.train(my_train)
-        elif y == "2":
-            Player.energy(my_energy)
-        elif y == "3":
-            Player.game(my_game)
-        elif y == "4":
-            break
-        else:
-            print("You have to choose 1,2,3, or 4")
-        self.random_value = random.randint(1,2)
-        if random == 1:
-            print("A event has spawned")
-        elif random == 2:
-            print
-menu(my_player)
-    
+        if choice == "1":
+            player.show
+        elif choice == "2":
+        elif choice == "3":
+        elif choice == "4":
+        elif choice == "5":
