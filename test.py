@@ -24,7 +24,6 @@ class Player:
 
     def can_rank_up(self):
         return self.rank<6 and self.fame>=self.rank*20 and self.ovr>=self.rank*20
-
     def rank_up(self):
         if self.can_rank_up():
             self.rank += 1
