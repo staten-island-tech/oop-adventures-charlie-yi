@@ -32,13 +32,13 @@ class Player:
     def rank_up(self):
         if self.can_rank_up():
             self.rank += 1
-            print("\n--- Rank Up! ---")
+            print(" Rank Up!")
             print("You advanced to:", self.location())
             dialogues = {
                 2:"Georgie: Congrats kid, welcome to the Local League! Keep grinding.",
-                3:"Johnathan: Proud of you! NCAA awaits.\nGeorgie: Couldn't have done it without your dedication!",
-                4:"Father: We're so proud!\nMother: Keep pushing, you've got this!",
-                5:"Georgie: NBA! You made it!\nFather & Mother: Our boy!\nJayce: Let's celebrate!",
+                3:"Johnathan: Proud of you! NCAA awaits.Georgie: Couldn't have done it without your dedication!",
+                4:"Father: We're so proud!Mother: Keep pushing, you've got this!",
+                5:"Georgie: NBA! You made it!Father & Mother: Our boy!Jayce: Let's celebrate!",
                 6:"Hall of Fame! Your journey ends here. Congratulations!"
             }
             print(dialogues.get(self.rank,""))
@@ -46,7 +46,7 @@ class Player:
             print("Requirements not met for rank up (OVR or Fame too low)")
 
     def show_stats(self):
-        print(f"\n--- Stats ---")
+        print(f" Stats ")
         print(f"Name: {self.name} | OVR: {self.ovr} | Energy: {self.energy} | Morale: {self.morale} | Fame: {self.fame} | Money: {self.money} | Location: {self.location()}")
 
     def show_inventory(self):
@@ -82,7 +82,7 @@ class Player:
     def pickup_game(self):
         if self.energy<10: print("Too tired"); return
         opp = self.ovr + random.randint(-5,5)
-        print("\nPickup game vs OVR",opp)
+        print("Pickup game vs OVR",opp)
         print("1) Drive  2) Shoot  3) Pass")
         input("> ")
         chance = 50+(self.ovr-opp)
@@ -124,7 +124,7 @@ class Store:
         ]
 
     def open(self, player):
-        print("\n--- Store ---")
+        print(" Store ")
         for i,item in enumerate(self.items):
             print(f"{i}) {item.name} - ${item.cost}")
         choice=input("Type item number to buy or 'back': ")
